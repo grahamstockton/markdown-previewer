@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+:root {
+    text-align: center;
+    --background-color: #F3F6F9;
+    --border-color: #777777;
+    --text-area-color: white;
+    --header-color: #dddddd;
+    --shadow-color: #777777;
+    --shadow-weight: 8px;
+
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, p {
+    margin: 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    background-color: var(--background-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.page-header {
+    background-color: var(--header-color);
+    border: 1px solid var(--border-color);
+    filter: drop-shadow(var(--shadow-weight) var(--shadow-weight) 10px var(--shadow-color));
+    width: 500px;
+    margin: auto;
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
 }
 
-.App-link {
-  color: #61dafb;
+#preview {
+    border: 1px solid var(--border-color);
+    background-color: var(--text-area-color);
+    overflow: auto;
+    margin: auto;
+    padding: 1rem;
+    text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+    font-size: 1rem;
+    height: auto;
+}
+
+.editor-container {
+    width: 800px;
+    margin: auto;
+    padding-bottom: 1.5rem;
+    filter: drop-shadow(var(--shadow-weight) var(--shadow-weight) 10px var(--shadow-color));
+}
+
+.display-container {
+    width: 1000px;
+    margin: auto;
+    filter: drop-shadow(var(--shadow-weight) var(--shadow-weight) 10px var(--shadow-color));
+}
+
+.editor-container > #editor-header {
+    text-align: left;
+    border: 1px solid var(--border-color);
+    padding-left: 1rem;
+    background-color: var(--header-color);
+}
+
+.editor-container > textarea {
+    width: 99%;
+    height: 250px;
+    background-color: var(--text-area-color);
+    border: 1px solid var(--border-color);
+}
+
+.display-container > #preview-header {
+    text-align: left;
+    border: 1px solid var(--border-color);
+    padding-left: 1rem;
+    background-color: var(--header-color);
 }
